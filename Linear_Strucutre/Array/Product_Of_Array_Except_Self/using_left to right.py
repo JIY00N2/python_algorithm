@@ -1,0 +1,21 @@
+from typing import List
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        out = []
+        p = 1
+        # 왼쪽 곱셈 결과
+        for i in range(len(nums)):
+            out.append(p)
+            p = p * nums[i]
+
+        p = 1
+        #  왼쪽 곱셈 결과에 오른쪽 곱셈 결과를 차례대로 곱함
+        for i in range(len(nums)-1, 0-1, -1):
+            out[i] = out[i] * p
+            p = p * nums[i]
+        return out
+
+solution = Solution()
+nums:  list = [1,2,3,4]
+result: list = solution.productExceptSelf(nums)
+print(result)
