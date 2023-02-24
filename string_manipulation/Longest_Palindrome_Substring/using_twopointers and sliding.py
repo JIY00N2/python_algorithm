@@ -15,7 +15,7 @@ class Solution:
         # 슬라이딩 윈도우 오른쪽으로 이동
         for i in range(len(s)-1):
             result = max(result, expand(i,i+1), expand(i,i+2), key=len) # max(str, key = len): 문자열의 길이가 가장 큰 것 반환
-            return result
+        return result
 
 solution = Solution()
 test_case:  str = "babad"
