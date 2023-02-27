@@ -8,7 +8,7 @@ class Solution:
             else:
                 letters.append(log)
         # sort - 리턴 x, sorted - 정렬된 새로운 리스트 리턴
-        letters.sort(key=lambda x: (x.split()[1:], x.split()[0])) # key = lambda : key값에 함수를 넘겨주면 우선순위 정렬
+        letters.sort(key=lambda x: (x.split()[1:], x.split()[0])) # key = lambda : key값에 함수를 넘겨주면 우선순위 정렬, 두번째 인자 -> 첫번째 인자 순
         return letters + digits
         # letters + digits : letters 다음에 digits
 solution = Solution()
