@@ -20,3 +20,5 @@ solution = Solution()
 paragraph: str= "Bob hit a ball, the hit BALL flew far after it was hit."
 # test_case 2
 banned: List[str] = ["hit"]
+result: str = solution.mostCommonWord(paragraph, banned)
+print(result) # 출력 : ["ball"]
