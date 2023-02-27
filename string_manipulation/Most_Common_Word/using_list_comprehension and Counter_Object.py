@@ -16,7 +16,7 @@ class Solution:
         return counts.most_common(1)[0][0]
 
 solution = Solution()
-# test_case 1
 paragraph: str= "Bob hit a ball, the hit BALL flew far after it was hit."
-# test_case 2
 banned: List[str] = ["hit"]
+result: str = solution.mostCommonWord(paragraph, banned)
+print(result) # 출력 : ["ball"]
